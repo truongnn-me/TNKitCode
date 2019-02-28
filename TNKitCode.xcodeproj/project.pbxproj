@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		232FD7AB22254CF30078160F /* TNStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNStringTests.swift; sourceTree = "<group>"; };
+		232FD7AE2227E2AC0078160F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		239359AD22253E860057383E /* TNKitCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNKitCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239359B022253E860057383E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239359B222253E870057383E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		239359AF22253E860057383E /* TNKitCode */ = {
 			isa = PBXGroup;
 			children = (
+				232FD7AE2227E2AC0078160F /* MyPlayground.playground */,
 				239359DE22253EA90057383E /* Extension */,
 				239359B022253E860057383E /* AppDelegate.swift */,
 				239359B222253E870057383E /* ViewController.swift */,
