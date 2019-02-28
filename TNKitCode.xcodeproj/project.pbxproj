@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		232FD7AC22254CF30078160F /* TNStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232FD7AB22254CF30078160F /* TNStringTests.swift */; };
+		232FD7B2222852E10078160F /* TNStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232FD7B1222852E10078160F /* TNStringTests.swift */; };
 		239359B122253E860057383E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239359B022253E860057383E /* AppDelegate.swift */; };
 		239359B322253E870057383E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239359B222253E870057383E /* ViewController.swift */; };
 		239359B622253E870057383E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239359B422253E870057383E /* Main.storyboard */; };
@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		232FD7AB22254CF30078160F /* TNStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNStringTests.swift; sourceTree = "<group>"; };
 		232FD7AE2227E2AC0078160F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		232FD7B1222852E10078160F /* TNStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TNStringTests.swift; path = TNKitCodeTests/String/TNStringTests.swift; sourceTree = SOURCE_ROOT; };
 		239359AD22253E860057383E /* TNKitCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNKitCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239359B022253E860057383E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239359B222253E870057383E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		232FD7AD22254E940078160F /* String */ = {
 			isa = PBXGroup;
 			children = (
-				232FD7AB22254CF30078160F /* TNStringTests.swift */,
+				232FD7B1222852E10078160F /* TNStringTests.swift */,
 			);
 			name = String;
 			path = "New Group";
@@ -291,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232FD7AC22254CF30078160F /* TNStringTests.swift in Sources */,
+				232FD7B2222852E10078160F /* TNStringTests.swift in Sources */,
 				239359C622253E880057383E /* TNKitCodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
