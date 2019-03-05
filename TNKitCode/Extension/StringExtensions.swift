@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
     /**
      Return the minimum width for display text in 1 line
      */

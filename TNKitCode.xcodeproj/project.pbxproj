@@ -7,159 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		232FD7B2222852E10078160F /* TNStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232FD7B1222852E10078160F /* TNStringTests.swift */; };
-		239359B122253E860057383E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239359B022253E860057383E /* AppDelegate.swift */; };
-		239359B322253E870057383E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239359B222253E870057383E /* ViewController.swift */; };
-		239359B622253E870057383E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239359B422253E870057383E /* Main.storyboard */; };
-		239359B822253E870057383E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239359B722253E870057383E /* Assets.xcassets */; };
-		239359BB22253E870057383E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239359B922253E870057383E /* LaunchScreen.storyboard */; };
-		239359C622253E880057383E /* TNKitCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239359C522253E880057383E /* TNKitCodeTests.swift */; };
-		239359D122253E880057383E /* TNKitCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239359D022253E880057383E /* TNKitCodeUITests.swift */; };
-		239359E022253F0A0057383E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239359DF22253F0A0057383E /* StringExtensions.swift */; };
+		235C78D2222E8477006D7812 /* TNKitCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235C78C8222E8477006D7812 /* TNKitCode.framework */; };
+		235C78D7222E8477006D7812 /* TNKitCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C78D6222E8477006D7812 /* TNKitCodeTests.swift */; };
+		235C78D9222E8477006D7812 /* TNKitCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 235C78CB222E8477006D7812 /* TNKitCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		235C78E4222E84C1006D7812 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C78E3222E84C1006D7812 /* StringExtensions.swift */; };
+		235C78E9222E8508006D7812 /* TNStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C78E8222E8508006D7812 /* TNStringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		239359C222253E880057383E /* PBXContainerItemProxy */ = {
+		235C78D3222E8477006D7812 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 239359A522253E860057383E /* Project object */;
+			containerPortal = 235C78BF222E8477006D7812 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 239359AC22253E860057383E;
-			remoteInfo = TNKitCode;
-		};
-		239359CD22253E880057383E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 239359A522253E860057383E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 239359AC22253E860057383E;
+			remoteGlobalIDString = 235C78C7222E8477006D7812;
 			remoteInfo = TNKitCode;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		232FD7AE2227E2AC0078160F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		232FD7B1222852E10078160F /* TNStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TNStringTests.swift; path = TNKitCodeTests/String/TNStringTests.swift; sourceTree = SOURCE_ROOT; };
-		239359AD22253E860057383E /* TNKitCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNKitCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		239359B022253E860057383E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		239359B222253E870057383E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		239359B522253E870057383E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		239359B722253E870057383E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		239359BA22253E870057383E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		239359BC22253E870057383E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		239359C122253E880057383E /* TNKitCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNKitCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		239359C522253E880057383E /* TNKitCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNKitCodeTests.swift; sourceTree = "<group>"; };
-		239359C722253E880057383E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		239359CC22253E880057383E /* TNKitCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNKitCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		239359D022253E880057383E /* TNKitCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNKitCodeUITests.swift; sourceTree = "<group>"; };
-		239359D222253E880057383E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		239359DF22253F0A0057383E /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		235C78C8222E8477006D7812 /* TNKitCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TNKitCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		235C78CB222E8477006D7812 /* TNKitCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNKitCode.h; sourceTree = "<group>"; };
+		235C78CC222E8477006D7812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235C78D1222E8477006D7812 /* TNKitCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNKitCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		235C78D6222E8477006D7812 /* TNKitCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNKitCodeTests.swift; sourceTree = "<group>"; };
+		235C78D8222E8477006D7812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235C78E3222E84C1006D7812 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		235C78E8222E8508006D7812 /* TNStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TNStringTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		239359AA22253E860057383E /* Frameworks */ = {
+		235C78C5222E8477006D7812 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		239359BE22253E880057383E /* Frameworks */ = {
+		235C78CE222E8477006D7812 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		239359C922253E880057383E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				235C78D2222E8477006D7812 /* TNKitCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		232FD7AD22254E940078160F /* String */ = {
+		235C78BE222E8477006D7812 = {
 			isa = PBXGroup;
 			children = (
-				232FD7B1222852E10078160F /* TNStringTests.swift */,
-			);
-			name = String;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		239359A422253E860057383E = {
-			isa = PBXGroup;
-			children = (
-				239359AF22253E860057383E /* TNKitCode */,
-				239359C422253E880057383E /* TNKitCodeTests */,
-				239359CF22253E880057383E /* TNKitCodeUITests */,
-				239359AE22253E860057383E /* Products */,
+				235C78CA222E8477006D7812 /* TNKitCode */,
+				235C78D5222E8477006D7812 /* TNKitCodeTests */,
+				235C78C9222E8477006D7812 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		239359AE22253E860057383E /* Products */ = {
+		235C78C9222E8477006D7812 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				239359AD22253E860057383E /* TNKitCode.app */,
-				239359C122253E880057383E /* TNKitCodeTests.xctest */,
-				239359CC22253E880057383E /* TNKitCodeUITests.xctest */,
+				235C78C8222E8477006D7812 /* TNKitCode.framework */,
+				235C78D1222E8477006D7812 /* TNKitCodeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		239359AF22253E860057383E /* TNKitCode */ = {
+		235C78CA222E8477006D7812 /* TNKitCode */ = {
 			isa = PBXGroup;
 			children = (
-				232FD7AE2227E2AC0078160F /* MyPlayground.playground */,
-				239359DE22253EA90057383E /* Extension */,
-				239359B022253E860057383E /* AppDelegate.swift */,
-				239359B222253E870057383E /* ViewController.swift */,
-				239359B422253E870057383E /* Main.storyboard */,
-				239359B722253E870057383E /* Assets.xcassets */,
-				239359B922253E870057383E /* LaunchScreen.storyboard */,
-				239359BC22253E870057383E /* Info.plist */,
+				235C78E2222E84C1006D7812 /* Extension */,
+				235C78CB222E8477006D7812 /* TNKitCode.h */,
+				235C78CC222E8477006D7812 /* Info.plist */,
 			);
 			path = TNKitCode;
 			sourceTree = "<group>";
 		};
-		239359C422253E880057383E /* TNKitCodeTests */ = {
+		235C78D5222E8477006D7812 /* TNKitCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				232FD7AD22254E940078160F /* String */,
-				239359C522253E880057383E /* TNKitCodeTests.swift */,
-				239359C722253E880057383E /* Info.plist */,
+				235C78E7222E84FB006D7812 /* String */,
+				235C78D6222E8477006D7812 /* TNKitCodeTests.swift */,
+				235C78D8222E8477006D7812 /* Info.plist */,
 			);
 			path = TNKitCodeTests;
 			sourceTree = "<group>";
 		};
-		239359CF22253E880057383E /* TNKitCodeUITests */ = {
+		235C78E2222E84C1006D7812 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				239359D022253E880057383E /* TNKitCodeUITests.swift */,
-				239359D222253E880057383E /* Info.plist */,
-			);
-			path = TNKitCodeUITests;
-			sourceTree = "<group>";
-		};
-		239359DE22253EA90057383E /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				239359DF22253F0A0057383E /* StringExtensions.swift */,
+				235C78E3222E84C1006D7812 /* StringExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		235C78E7222E84FB006D7812 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				235C78E8222E8508006D7812 /* TNStringTests.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		235C78C3222E8477006D7812 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235C78D9222E8477006D7812 /* TNKitCode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		239359AC22253E860057383E /* TNKitCode */ = {
+		235C78C7222E8477006D7812 /* TNKitCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 239359D522253E880057383E /* Build configuration list for PBXNativeTarget "TNKitCode" */;
+			buildConfigurationList = 235C78DC222E8477006D7812 /* Build configuration list for PBXNativeTarget "TNKitCode" */;
 			buildPhases = (
-				239359A922253E860057383E /* Sources */,
-				239359AA22253E860057383E /* Frameworks */,
-				239359AB22253E860057383E /* Resources */,
+				235C78C3222E8477006D7812 /* Headers */,
+				235C78C4222E8477006D7812 /* Sources */,
+				235C78C5222E8477006D7812 /* Frameworks */,
+				235C78C6222E8477006D7812 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -167,107 +137,72 @@
 			);
 			name = TNKitCode;
 			productName = TNKitCode;
-			productReference = 239359AD22253E860057383E /* TNKitCode.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 235C78C8222E8477006D7812 /* TNKitCode.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		239359C022253E880057383E /* TNKitCodeTests */ = {
+		235C78D0222E8477006D7812 /* TNKitCodeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 239359D822253E880057383E /* Build configuration list for PBXNativeTarget "TNKitCodeTests" */;
+			buildConfigurationList = 235C78DF222E8477006D7812 /* Build configuration list for PBXNativeTarget "TNKitCodeTests" */;
 			buildPhases = (
-				239359BD22253E880057383E /* Sources */,
-				239359BE22253E880057383E /* Frameworks */,
-				239359BF22253E880057383E /* Resources */,
+				235C78CD222E8477006D7812 /* Sources */,
+				235C78CE222E8477006D7812 /* Frameworks */,
+				235C78CF222E8477006D7812 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				239359C322253E880057383E /* PBXTargetDependency */,
+				235C78D4222E8477006D7812 /* PBXTargetDependency */,
 			);
 			name = TNKitCodeTests;
 			productName = TNKitCodeTests;
-			productReference = 239359C122253E880057383E /* TNKitCodeTests.xctest */;
+			productReference = 235C78D1222E8477006D7812 /* TNKitCodeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		239359CB22253E880057383E /* TNKitCodeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 239359DB22253E880057383E /* Build configuration list for PBXNativeTarget "TNKitCodeUITests" */;
-			buildPhases = (
-				239359C822253E880057383E /* Sources */,
-				239359C922253E880057383E /* Frameworks */,
-				239359CA22253E880057383E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				239359CE22253E880057383E /* PBXTargetDependency */,
-			);
-			name = TNKitCodeUITests;
-			productName = TNKitCodeUITests;
-			productReference = 239359CC22253E880057383E /* TNKitCodeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		239359A522253E860057383E /* Project object */ = {
+		235C78BF222E8477006D7812 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Truong Nguyen Nhut";
 				TargetAttributes = {
-					239359AC22253E860057383E = {
+					235C78C7222E8477006D7812 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					239359C022253E880057383E = {
+					235C78D0222E8477006D7812 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 239359AC22253E860057383E;
-					};
-					239359CB22253E880057383E = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 239359AC22253E860057383E;
 					};
 				};
 			};
-			buildConfigurationList = 239359A822253E860057383E /* Build configuration list for PBXProject "TNKitCode" */;
+			buildConfigurationList = 235C78C2222E8477006D7812 /* Build configuration list for PBXProject "TNKitCode" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 239359A422253E860057383E;
-			productRefGroup = 239359AE22253E860057383E /* Products */;
+			mainGroup = 235C78BE222E8477006D7812;
+			productRefGroup = 235C78C9222E8477006D7812 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				239359AC22253E860057383E /* TNKitCode */,
-				239359C022253E880057383E /* TNKitCodeTests */,
-				239359CB22253E880057383E /* TNKitCodeUITests */,
+				235C78C7222E8477006D7812 /* TNKitCode */,
+				235C78D0222E8477006D7812 /* TNKitCodeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		239359AB22253E860057383E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				239359BB22253E870057383E /* LaunchScreen.storyboard in Resources */,
-				239359B822253E870057383E /* Assets.xcassets in Resources */,
-				239359B622253E870057383E /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		239359BF22253E880057383E /* Resources */ = {
+		235C78C6222E8477006D7812 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		239359CA22253E880057383E /* Resources */ = {
+		235C78CF222E8477006D7812 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,69 +212,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		239359A922253E860057383E /* Sources */ = {
+		235C78C4222E8477006D7812 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				239359E022253F0A0057383E /* StringExtensions.swift in Sources */,
-				239359B322253E870057383E /* ViewController.swift in Sources */,
-				239359B122253E860057383E /* AppDelegate.swift in Sources */,
+				235C78E4222E84C1006D7812 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		239359BD22253E880057383E /* Sources */ = {
+		235C78CD222E8477006D7812 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232FD7B2222852E10078160F /* TNStringTests.swift in Sources */,
-				239359C622253E880057383E /* TNKitCodeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		239359C822253E880057383E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				239359D122253E880057383E /* TNKitCodeUITests.swift in Sources */,
+				235C78E9222E8508006D7812 /* TNStringTests.swift in Sources */,
+				235C78D7222E8477006D7812 /* TNKitCodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		239359C322253E880057383E /* PBXTargetDependency */ = {
+		235C78D4222E8477006D7812 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 239359AC22253E860057383E /* TNKitCode */;
-			targetProxy = 239359C222253E880057383E /* PBXContainerItemProxy */;
-		};
-		239359CE22253E880057383E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 239359AC22253E860057383E /* TNKitCode */;
-			targetProxy = 239359CD22253E880057383E /* PBXContainerItemProxy */;
+			target = 235C78C7222E8477006D7812 /* TNKitCode */;
+			targetProxy = 235C78D3222E8477006D7812 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		239359B422253E870057383E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				239359B522253E870057383E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		239359B922253E870057383E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				239359BA22253E870057383E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		239359D322253E880057383E /* Debug */ = {
+		235C78DA222E8477006D7812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -373,6 +274,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -397,10 +299,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		239359D422253E880057383E /* Release */ = {
+		235C78DB222E8477006D7812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -434,6 +338,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -452,48 +357,65 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		239359D622253E880057383E /* Debug */ = {
+		235C78DD222E8477006D7812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TNKitCode/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = truong.me.TNKitCode;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		239359D722253E880057383E /* Release */ = {
+		235C78DE222E8477006D7812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TNKitCode/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = truong.me.TNKitCode;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		239359D922253E880057383E /* Debug */ = {
+		235C78E0222E8477006D7812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TNKitCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,15 +427,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TNKitCode.app/TNKitCode";
 			};
 			name = Debug;
 		};
-		239359DA22253E880057383E /* Release */ = {
+		235C78E1222E8477006D7812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TNKitCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,88 +445,40 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TNKitCode.app/TNKitCode";
-			};
-			name = Release;
-		};
-		239359DC22253E880057383E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TNKitCodeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = truong.me.TNKitCodeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TNKitCode;
-			};
-			name = Debug;
-		};
-		239359DD22253E880057383E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TNKitCodeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = truong.me.TNKitCodeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TNKitCode;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		239359A822253E860057383E /* Build configuration list for PBXProject "TNKitCode" */ = {
+		235C78C2222E8477006D7812 /* Build configuration list for PBXProject "TNKitCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				239359D322253E880057383E /* Debug */,
-				239359D422253E880057383E /* Release */,
+				235C78DA222E8477006D7812 /* Debug */,
+				235C78DB222E8477006D7812 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		239359D522253E880057383E /* Build configuration list for PBXNativeTarget "TNKitCode" */ = {
+		235C78DC222E8477006D7812 /* Build configuration list for PBXNativeTarget "TNKitCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				239359D622253E880057383E /* Debug */,
-				239359D722253E880057383E /* Release */,
+				235C78DD222E8477006D7812 /* Debug */,
+				235C78DE222E8477006D7812 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		239359D822253E880057383E /* Build configuration list for PBXNativeTarget "TNKitCodeTests" */ = {
+		235C78DF222E8477006D7812 /* Build configuration list for PBXNativeTarget "TNKitCodeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				239359D922253E880057383E /* Debug */,
-				239359DA22253E880057383E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		239359DB22253E880057383E /* Build configuration list for PBXNativeTarget "TNKitCodeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				239359DC22253E880057383E /* Debug */,
-				239359DD22253E880057383E /* Release */,
+				235C78E0222E8477006D7812 /* Debug */,
+				235C78E1222E8477006D7812 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 239359A522253E860057383E /* Project object */;
+	rootObject = 235C78BF222E8477006D7812 /* Project object */;
 }

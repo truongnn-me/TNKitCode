@@ -2,7 +2,7 @@
 //  TNKitCodeTests.swift
 //  TNKitCodeTests
 //
-//  Created by Truong Nguyen Nhut (Lazada Group) on 2/26/19.
+//  Created by Truong Nguyen Nhut (Lazada Group) on 3/5/19.
 //  Copyright © 2019 Truong Nguyen Nhut. All rights reserved.
 //
 
