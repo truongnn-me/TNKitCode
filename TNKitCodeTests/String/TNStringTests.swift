@@ -155,22 +155,28 @@ class TNStringTests: XCTestCase {
         XCTAssertNil(result)
     }
     
-    func test_testReg_withNumberPatternAndStringContainNumbers_shouldReturnTrue() {
+    func test_checkReg_withNumberPatternAndStringContainNumbers_shouldReturnTrue() {
         let testString = "1234 abc asad"
         let result = testString.checkReg(regString: "\\d")
         XCTAssertTrue(result)
     }
     
-    func test_testReg_withWordPatternAndStringContainNumbers_shouldReturnFalse() {
+    func test_checkReg_withWordPatternAndStringContainNumbers_shouldReturnFalse() {
         let testString = "1234"
         let result = testString.checkReg(regString: "[a-zA-Z]+")
         XCTAssertFalse(result)
     }
     
-    func test_testReg_withWordPatternAndStringContainNumbersAndString_shouldReturnTrue() {
+    func test_checkReg_withWordPatternAndStringContainNumbersAndString_shouldReturnTrue() {
         let testString = "1234 abcs dsdsssd"
         let result = testString.checkReg(regString: "[a-zA-Z]+")
         XCTAssertTrue(result)
+    }
+    
+    func test_checkReg_withInvalidRegularExpression_shouldReturnFalse() {
+        let testString = "1234 abcs dsdsssd"
+        let result = testString.checkReg(regString: "\\1*")
+        XCTAssertFalse(result)
     }
     
 }

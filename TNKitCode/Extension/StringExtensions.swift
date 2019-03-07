@@ -9,6 +9,15 @@
 import UIKit
 
 public extension String {
+    /**
+     Check if the String contains substring which is match with the regular expression
+     - Parameters:
+        - regString: the regular expression in String
+     - Returns:
+        - False: if the regular expression is not correct or cannot find any substring which is match with the regular expression.
+        - True: Can find the substring which is match with the regular expression.
+     
+     */
     func checkReg(regString: String) -> Bool {
         let range = NSRange(location: 0, length: self.count)
         do {
