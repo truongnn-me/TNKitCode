@@ -13,10 +13,13 @@ public extension String {
         let range = NSRange(location: 0, length: self.count)
         do {
             let reg = try NSRegularExpression(pattern: regString, options: .caseInsensitive)
-            return reg.firstMatch(in: self, options: NSRegularExpression.MatchingOptions.reportProgress, range: range) != nil
+            if let _ = reg.firstMatch(in: self, options: NSRegularExpression.MatchingOptions.reportCompletion, range: range) {
+                return true
+            }
         } catch {
             return false
-        }        
+        }
+        return false
     }
         
     /**
