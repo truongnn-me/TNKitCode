@@ -16,8 +16,7 @@ public extension String {
             return reg.firstMatch(in: self, options: NSRegularExpression.MatchingOptions.reportProgress, range: range) != nil
         } catch {
             return false
-        }
-        return false
+        }        
     }
         
     /**
