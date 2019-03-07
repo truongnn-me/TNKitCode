@@ -9,6 +9,17 @@
 import UIKit
 
 public extension String {
+    func checkReg(regString: String) -> Bool {
+        let range = NSRange(location: 0, length: self.count)
+        do {
+            let reg = try NSRegularExpression(pattern: regString, options: .caseInsensitive)
+            return reg.firstMatch(in: self, options: NSRegularExpression.MatchingOptions.reportProgress, range: range) != nil
+        } catch {
+            return false
+        }
+        return false
+    }
+        
     /**
      Return the minimum width for display text in 1 line
      */
