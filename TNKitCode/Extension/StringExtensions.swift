@@ -10,6 +10,22 @@ import UIKit
 
 public extension String {
     /**
+     Build a Dictionary with Key is a String, Value: Key's number of occurrence in the current string.
+     - Returns:
+        - a Dictionary with Key is a String, Value: Key's number of occurrence in the current string.
+     */
+    func stringMap() -> [String: Int] {
+        var result = [String: Int]()
+        for character in self {
+            if let count = result[String(character)] {
+                result[String(character)] = count + 1
+            } else {
+                result[String(character)] = 1
+            }
+        }
+        return result
+    }
+    /**
      Return an array contains all substring which matched with the regular epression
      - Parameters:
         - regString: the regular expression in String

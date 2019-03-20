@@ -155,6 +155,7 @@ class TNStringTests: XCTestCase {
         XCTAssertNil(result)
     }
     
+    //MARK: test checkReg method
     func test_checkReg_withNumberPatternAndStringContainNumbers_shouldReturnTrue() {
         let testString = "1234 abc asad"
         let result = testString.checkReg(regString: "\\d")
@@ -179,6 +180,7 @@ class TNStringTests: XCTestCase {
         XCTAssertFalse(result)
     }
     
+    //MARK: test matchesReg method
     func test_matchesReg_withValidExpression_shouldReturnArrayContainsAllMatchedString() {
         let testString = "1234 abcs dsdsssd"
         let result = testString.matchesReg(regString: "[a-zA-Z]+")
@@ -193,4 +195,16 @@ class TNStringTests: XCTestCase {
         }
     }
     
+    //MARK: test stringMap method
+    func test_stringMap_whenStringIsNotEmpty_shouldReturnDictionary() {
+        let stringTest = "abcd dba kil"
+        let result = stringTest.stringMap()
+        XCTAssertTrue(result["a"] == 2)
+        XCTAssertTrue(result["b"] == 2)
+        XCTAssertTrue(result["c"] == 1)
+        XCTAssertTrue(result["d"] == 2)
+        XCTAssertTrue(result["k"] == 1)
+        XCTAssertTrue(result["i"] == 1)
+        XCTAssertTrue(result["l"] == 1)
+    }
 }
