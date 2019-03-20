@@ -179,4 +179,18 @@ class TNStringTests: XCTestCase {
         XCTAssertFalse(result)
     }
     
+    func test_matchesReg_withValidExpression_shouldReturnArrayContainsAllMatchedString() {
+        let testString = "1234 abcs dsdsssd"
+        let result = testString.matchesReg(regString: "[a-zA-Z]+")
+        if let result = result {
+            let matchedString1 = "abcs"
+            let matchedString2 = "dsdsssd"
+            XCTAssert(result.count == 2, "Array result should contain 2 items")
+            XCTAssertTrue(result.contains(matchedString1))
+            XCTAssertTrue(result.contains(matchedString2))
+        } else {
+            XCTFail()
+        }
+    }
+    
 }

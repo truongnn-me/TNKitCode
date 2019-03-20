@@ -10,6 +10,36 @@ import UIKit
 
 public extension String {
     /**
+     Return an array contains all substring which matched with the regular epression
+     - Parameters:
+        - regString: the regular expression in String
+     - Returns:
+        - Return an array contains all substring which matched with the regular epression
+        - Return nil: If cannot find any substring or the regular expression is not valid
+     */
+    func matchesReg(regString: String) -> [String]? {
+        let range = NSRange(location: 0, length: self.count)
+        var result: [String]?
+        do {
+            let reg = try NSRegularExpression(pattern: regString, options: NSRegularExpression.Options.caseInsensitive)
+            let resultMatched = reg.matches(in: self, options: NSRegularExpression.MatchingOptions.reportProgress, range: range)
+            if resultMatched.count > 0 {
+                result = [String]()
+            }
+            for element in resultMatched {
+                if let stringRange = Range(element.range, in: self) {
+                    let subString = self[stringRange]
+                    let string = String(subString)
+                    result?.append(string)
+                }
+            }
+        } catch {
+            return result
+        }
+        return result
+    }
+    
+    /**
      Check if the String contains substring which is match with the regular expression
      - Parameters:
         - regString: the regular expression in String
