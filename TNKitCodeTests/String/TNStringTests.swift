@@ -207,4 +207,15 @@ class TNStringTests: XCTestCase {
         XCTAssertTrue(result["i"] == 1)
         XCTAssertTrue(result["l"] == 1)
     }
+    
+    //MARK: test cleanString method
+    func test_cleanString_whenStringContainsCharatersAndSpace_shouldReturnStringContainsCharactersInLowercaseRemoveAllSpace() {
+        let testString = "a b c d e 1 234"
+        XCTAssertTrue(testString.cleanString() == "abcde1234")
+    }
+    
+    func test_cleanString_whenStringContainsOnlySpaces_shouldReturnStringRemoveAllSpaces() {
+        let testString = "           "
+        XCTAssertTrue(testString.cleanString() == "")
+    }
 }

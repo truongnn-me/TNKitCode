@@ -10,6 +10,14 @@ import UIKit
 
 public extension String {
     /**
+     Create a string which contains lowercase, removes space.
+     - Returns:
+        - a string which contains lowercase, removes space.
+     */
+    func cleanString() -> String {
+        return self.replacingOccurrences(of: " ", with: "").lowercased()
+    }
+    /**
      Build a Dictionary with Key is a String, Value: Key's number of occurrence in the current string.
      - Returns:
         - a Dictionary with Key is a String, Value: Key's number of occurrence in the current string.
