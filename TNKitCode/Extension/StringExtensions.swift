@@ -23,15 +23,13 @@ public extension String {
         - a Dictionary with Key is a String, Value: Key's number of occurrence in the current string.
      */
     func stringMap() -> [String: Int] {
-        var result = [String: Int]()
-        for character in self {
-            if let count = result[String(character)] {
-                result[String(character)] = count + 1
-            } else {
-                result[String(character)] = 1
-            }
+        let resultMap = self.reduce([String: Int]()) { result, character in
+            var map = result
+            let string = String(character)
+            map[string] = (map[string] ?? 0 ) + 1
+            return map
         }
-        return result
+        return resultMap
     }
     /**
      Return an array contains all substring which matched with the regular epression
