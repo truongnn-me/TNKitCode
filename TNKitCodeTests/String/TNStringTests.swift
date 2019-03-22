@@ -218,4 +218,35 @@ class TNStringTests: XCTestCase {
         let testString = "           "
         XCTAssertTrue(testString.cleanString() == "")
     }
+    
+    //MARK: test anagrams method
+    func test_anagrams_withTwoStringsAreAnagramsEachOther_shouldReturnTrue() {
+        let testString1 = "abcdef gh"
+        let testString2 = "gh dcbaef"
+        XCTAssertTrue(testString1.anagram(string: testString2))        
+        XCTAssertTrue("        abc".anagram(string: "a b c"))
+    }
+    
+    func test_anagrams_withTwoStringsAreNotAnagramsEachOther_shouldReturnFalse() {
+        let testString1 = "abcdef gh"
+        let testString2 = "Truong Nguyen"
+        XCTAssertFalse(testString1.anagram(string: testString2))
+        
+        let testString3 = "abcdef gh123"
+        XCTAssertFalse(testString1.anagram(string: testString3))
+
+        let testString4 = " "
+        XCTAssertFalse(testString1.anagram(string: testString4))
+        
+        XCTAssertFalse("abc".anagram(string: "a"))
+    }
+    
+    func test_anagrams_withTwoStringsAreEmpty_shouldReturnTrue() {
+        let testString1 = ""
+        let testString2 = ""
+        XCTAssertTrue(testString1.anagram(string: testString2))
+    }
+    
+    
+    
 }

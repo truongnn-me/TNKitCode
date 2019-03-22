@@ -17,6 +17,21 @@ public extension String {
     func cleanString() -> String {
         return self.replacingOccurrences(of: " ", with: "").lowercased()
     }
+    
+    /**
+     Check to see if two strings anagram of each other. Only check characters inside string, ignore space, lowercase & uppercase
+     - Parameters:
+        - string: a string that need to check anagrams with the target
+     - Returns:
+        - False: Two strings are not anagram each other
+        - True: Two strings are anagrams each other
+     */
+    func anagram(string: String) -> Bool {
+        let sortedString1 = String(Array(self.cleanString()).sorted())
+        let sortedString2 = String(Array(string.cleanString()).sorted())
+        return sortedString1 == sortedString2
+    }
+    
     /**
      Build a Dictionary with Key is a String, Value: Key's number of occurrence in the current string.
      - Returns:
