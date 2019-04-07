@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233EC1C12259DDC30003364E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C02259DDC30003364E /* Result.swift */; };
+		233EC1C32259DDDE0003364E /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C22259DDDE0003364E /* TokenRequest.swift */; };
+		233EC1C52259DDF40003364E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C42259DDF40003364E /* DataProvider.swift */; };
+		233EC1C72259DE0B0003364E /* NetworkToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C62259DE0B0003364E /* NetworkToken.swift */; };
+		233EC1C92259DE240003364E /* Dependencyfactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C82259DE240003364E /* Dependencyfactory.swift */; };
+		233EC1CB2259DE4B0003364E /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1CA2259DE4B0003364E /* URLSessionExtension.swift */; };
+		233EC1CD2259DE790003364E /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1CC2259DE790003364E /* DependencyContainer.swift */; };
+		233EC1D52259E71C0003364E /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1D42259E71C0003364E /* UIImageViewExtensions.swift */; };
 		235C78D2222E8477006D7812 /* TNKitCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235C78C8222E8477006D7812 /* TNKitCode.framework */; };
 		235C78D7222E8477006D7812 /* TNKitCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C78D6222E8477006D7812 /* TNKitCodeTests.swift */; };
 		235C78D9222E8477006D7812 /* TNKitCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 235C78CB222E8477006D7812 /* TNKitCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		233EC1C02259DDC30003364E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		233EC1C22259DDDE0003364E /* TokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
+		233EC1C42259DDF40003364E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		233EC1C62259DE0B0003364E /* NetworkToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkToken.swift; sourceTree = "<group>"; };
+		233EC1C82259DE240003364E /* Dependencyfactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencyfactory.swift; sourceTree = "<group>"; };
+		233EC1CA2259DE4B0003364E /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		233EC1CC2259DE790003364E /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		233EC1D42259E71C0003364E /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		235C78C8222E8477006D7812 /* TNKitCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TNKitCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		235C78CB222E8477006D7812 /* TNKitCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNKitCode.h; sourceTree = "<group>"; };
 		235C78CC222E8477006D7812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +72,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233EC1BF2259DDAE0003364E /* Core Network */ = {
+			isa = PBXGroup;
+			children = (
+				233EC1C02259DDC30003364E /* Result.swift */,
+				233EC1C22259DDDE0003364E /* TokenRequest.swift */,
+				233EC1C42259DDF40003364E /* DataProvider.swift */,
+				233EC1C62259DE0B0003364E /* NetworkToken.swift */,
+				233EC1C82259DE240003364E /* Dependencyfactory.swift */,
+				233EC1CA2259DE4B0003364E /* URLSessionExtension.swift */,
+				233EC1CC2259DE790003364E /* DependencyContainer.swift */,
+			);
+			path = "Core Network";
+			sourceTree = "<group>";
+		};
 		235C78BE222E8477006D7812 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +107,7 @@
 		235C78CA222E8477006D7812 /* TNKitCode */ = {
 			isa = PBXGroup;
 			children = (
+				233EC1BF2259DDAE0003364E /* Core Network */,
 				235C78E2222E84C1006D7812 /* Extension */,
 				235C78CB222E8477006D7812 /* TNKitCode.h */,
 				235C78CC222E8477006D7812 /* Info.plist */,
@@ -99,6 +130,7 @@
 			children = (
 				235C78E3222E84C1006D7812 /* StringExtensions.swift */,
 				235C78FA222E878A006D7812 /* ViewExtensions.swift */,
+				233EC1D42259E71C0003364E /* UIImageViewExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -219,8 +251,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233EC1CB2259DE4B0003364E /* URLSessionExtension.swift in Sources */,
+				233EC1C12259DDC30003364E /* Result.swift in Sources */,
 				235C78FB222E878A006D7812 /* ViewExtensions.swift in Sources */,
+				233EC1C72259DE0B0003364E /* NetworkToken.swift in Sources */,
+				233EC1C52259DDF40003364E /* DataProvider.swift in Sources */,
 				235C78E4222E84C1006D7812 /* StringExtensions.swift in Sources */,
+				233EC1C92259DE240003364E /* Dependencyfactory.swift in Sources */,
+				233EC1CD2259DE790003364E /* DependencyContainer.swift in Sources */,
+				233EC1D52259E71C0003364E /* UIImageViewExtensions.swift in Sources */,
+				233EC1C32259DDDE0003364E /* TokenRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
