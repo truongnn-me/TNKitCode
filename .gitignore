@@ -3,3 +3,5 @@ TNKitCode.xcodeproj/xcuserdata/truong.nguyen.xcuserdatad/xcschemes/xcschememanag
 TNKitCode.xcodeproj/xcuserdata/truong.nguyen.xcuserdatad/xcschemes/xcschememanagement.plist
 TNKitCode.xcodeproj/project.xcworkspace/xcuserdata/truongnn.xcuserdatad/UserInterfaceState.xcuserstate
 TNKitCode.xcodeproj/xcuserdata/truongnn.xcuserdatad/xcschemes/xcschememanagement.plist
+Carthage/Build/*
+Carthage/
