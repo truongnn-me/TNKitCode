@@ -9,10 +9,27 @@
 import UIKit
 
 public extension UIView {
-    func embeded(inView superView: UIView, inset: UIEdgeInsets = UIEdgeInsets.zero) {
-        NSLayoutConstraint.activate([topAnchor.constraint(equalTo: superView.topAnchor, constant: inset.top),
-                                     leftAnchor.constraint(equalTo: superView.leftAnchor, constant: inset.left),
-                                     rightAnchor.constraint(equalTo: superView.rightAnchor, constant: -inset.right),
-                                     bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -inset.bottom)])
+    
+    func embededInSupperView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        if let superView = superview {
+            NSLayoutConstraint.activate([topAnchor.constraint(equalTo: superView.topAnchor, constant: 0),
+                                         leftAnchor.constraint(equalTo: superView.leftAnchor, constant: 0),
+                                         rightAnchor.constraint(equalTo: superView.rightAnchor, constant: 0),
+                                         bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 0)])
+        }
+    }
+    
+    func setAutoDimension(toSize size: CGSize) {
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([widthAnchor.constraint(equalToConstant: size.width),
+                                     heightAnchor.constraint(equalToConstant: size.height)])
+        
+    }
+    
+    
+    func setBorder(color: UIColor = .red, width: CGFloat = 1) {
+        layer.borderWidth = width
+        layer.borderColor = color.cgColor
     }
 }
