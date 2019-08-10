@@ -43,10 +43,10 @@
 		91D5280E22FC357E00C553AA /* KitCode_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5280D22FC357E00C553AA /* KitCode_ExampleUITests.swift */; };
 		91D5281D22FC370B00C553AA /* TabHeaderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281C22FC370B00C553AA /* TabHeaderPage.swift */; };
 		91D5282022FC37B600C553AA /* TabHeaderPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */; };
-		91D5282322FC3D7500C553AA /* TabHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */; };
+		91D5282322FC3D7500C553AA /* DefaultTabHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* DefaultTabHeaderItemView.swift */; };
 		91D5282522FC52B100C553AA /* TabHeaderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281C22FC370B00C553AA /* TabHeaderPage.swift */; };
 		91D5282622FC52C000C553AA /* TabHeaderPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */; };
-		91D5282722FC68C700C553AA /* TabHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */; };
+		91D5282722FC68C700C553AA /* DefaultTabHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* DefaultTabHeaderItemView.swift */; };
 		91D5282822FC690700C553AA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C02259DDC30003364E /* Result.swift */; };
 		91D5282922FC690700C553AA /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C22259DDDE0003364E /* TokenRequest.swift */; };
 		91D5282A22FC690700C553AA /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C42259DDF40003364E /* DataProvider.swift */; };
@@ -146,7 +146,7 @@
 		91D5280F22FC357E00C553AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91D5281C22FC370B00C553AA /* TabHeaderPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderPage.swift; sourceTree = "<group>"; };
 		91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderPageViewModel.swift; sourceTree = "<group>"; };
-		91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderItemView.swift; sourceTree = "<group>"; };
+		91D5282222FC3D7500C553AA /* DefaultTabHeaderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabHeaderItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,7 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				91D5281C22FC370B00C553AA /* TabHeaderPage.swift */,
-				91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */,
+				91D5282222FC3D7500C553AA /* DefaultTabHeaderItemView.swift */,
 			);
 			path = TabHeader;
 			sourceTree = "<group>";
@@ -566,7 +566,7 @@
 				91D5282022FC37B600C553AA /* TabHeaderPageViewModel.swift in Sources */,
 				233EC1D52259E71C0003364E /* UIImageViewExtensions.swift in Sources */,
 				233EC1C32259DDDE0003364E /* TokenRequest.swift in Sources */,
-				91D5282322FC3D7500C553AA /* TabHeaderItemView.swift in Sources */,
+				91D5282322FC3D7500C553AA /* DefaultTabHeaderItemView.swift in Sources */,
 				91D5281D22FC370B00C553AA /* TabHeaderPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91D5282722FC68C700C553AA /* TabHeaderItemView.swift in Sources */,
+				91D5282722FC68C700C553AA /* DefaultTabHeaderItemView.swift in Sources */,
 				91D527F022FC357C00C553AA /* DemoListViewController.swift in Sources */,
 				91D5282622FC52C000C553AA /* TabHeaderPageViewModel.swift in Sources */,
 				91D5282822FC690700C553AA /* Result.swift in Sources */,

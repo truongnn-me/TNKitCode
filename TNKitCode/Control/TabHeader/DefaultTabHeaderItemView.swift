@@ -9,7 +9,7 @@
 import UIKit
 import PureLayout
 
-class TabHeaderItemView: AbstractView {
+class DefaultTabHeaderItemView: AbstractView {
     
     var label: UILabel = {
         let v = UILabel(forAutoLayout: ())

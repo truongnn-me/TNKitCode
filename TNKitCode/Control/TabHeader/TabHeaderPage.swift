@@ -54,7 +54,7 @@ public class TabHeaderPage: UIViewController {
         stackLayout.autoPinEdgesToSuperviewEdges()
         stackLayout.translatesAutoresizingMaskIntoConstraints = false
         for index in 0...10 {
-            let childView = TabHeaderItemView(forAutoLayout: ())
+            let childView = DefaultTabHeaderItemView(forAutoLayout: ())
             childView.tag = index
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickAction))
             childView.addGestureRecognizer(tapGesture)
