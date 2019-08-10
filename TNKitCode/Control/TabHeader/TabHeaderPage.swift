@@ -12,13 +12,23 @@ import RxSwift
 import RxCocoa
 
 public class TabHeaderPage: UIViewController {
+    
+    fileprivate var tabIndicatorLeadingConstraint: NSLayoutConstraint?
+    
     let disposeBag = DisposeBag()
     
-    var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        return collectionView
+    var stackLayout: UIStackView = {
+        let stackView = UIStackView(forAutoLayout: ())
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing // .FillEqually .FillProportionally .EqualSpacing .EqualCentering
+        stackView.alignment = .fill // .Leading .FirstBaseline .Center .Trailing .LastBaseline
+        stackView.spacing = 10
+        return stackView
+    }()
+    
+    var tabBarHeaderView: UIScrollView = {
+        let scrollView = UIScrollView(forAutoLayout: ())
+        return scrollView
     }()
     
     
@@ -29,61 +39,61 @@ public class TabHeaderPage: UIViewController {
     
     var indicatorView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .yellow
+        view.backgroundColor = .red
         return view
     }()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), excludingEdge: .bottom)
-        collectionView.autoMatch(.height, to: .height, of: view, withMultiplier: 0.95)
-        collectionView.register(TabHeaderCell.self, forCellWithReuseIdentifier: "TabHeaderCell")
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        view.addSubview(tabBarHeaderView)
+        tabBarHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        tabBarHeaderView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 0, bottom: 0, right:0), excludingEdge: .bottom)
+        tabBarHeaderView.autoMatch(.height, to: .height, of: view, withMultiplier: 0.95)
         
+        tabBarHeaderView.addSubview(stackLayout)
+        stackLayout.autoPinEdgesToSuperviewEdges()
+        stackLayout.translatesAutoresizingMaskIntoConstraints = false
+        for index in 0...10 {
+            let childView = TabHeaderItemView(forAutoLayout: ())
+            childView.tag = index
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickAction))
+            childView.addGestureRecognizer(tapGesture)
+            stackLayout.addArrangedSubview(childView)
+        }
+        
+        for childView in stackLayout.arrangedSubviews {
+            childView.autoMatch(.height, to: .height, of: tabBarHeaderView)
+        }
         view.addSubview(indicatorView)
         indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        indicatorView.autoPinEdge(toSuperviewEdge: .left, withInset: 0)
-        indicatorView.autoPinEdge(.top, to: .bottom, of: collectionView, withOffset: 0)
-        indicatorView.autoSetDimension(.width, toSize: 100)
+        tabIndicatorLeadingConstraint = indicatorView.autoPinEdge(toSuperviewEdge: .left, withInset: 0)
+        indicatorView.autoPinEdge(.top, to: .bottom, of: tabBarHeaderView, withOffset: 0)
+        indicatorView.autoSetDimension(.width, toSize: 29)
         indicatorView.autoMatch(.height, to: .height, of: view, withMultiplier: 0.05)
-        view.setBorder(color: .red, width: 1)
+    }
+    
+    @objc func clickAction() {
+        print("####Call me")
+        let view = stackLayout.arrangedSubviews[5]
+        self.tabIndicatorLeadingConstraint?.isActive = false
+        tabIndicatorLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        UIView.animate(withDuration: 0.5) {
+            self.tabIndicatorLeadingConstraint?.isActive = true
+        }
     }
     
 }
 
-extension TabHeaderPage: UICollectionViewDataSource {
-    public func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabHeaderCell", for: indexPath)
-        return cell
-    }
-    
-}
 
-extension TabHeaderPage: UICollectionViewDelegateFlowLayout {
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+extension TabHeaderPage: UICollectionViewDelegate {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Call me")
+        let cell = collectionView.cellForItem(at: indexPath)
+        self.tabIndicatorLeadingConstraint?.isActive = false
+        tabIndicatorLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: cell!.leadingAnchor)
+        UIView.animate(withDuration: 0.5) {
+            self.tabIndicatorLeadingConstraint?.isActive = true
+        }
+        
     }
-
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
-    }
-
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-
 }

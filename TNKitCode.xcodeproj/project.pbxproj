@@ -32,6 +32,8 @@
 		91A56C3322FD3DDF00FA59F1 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A56C3222FD3DDF00FA59F1 /* RxRelay.framework */; };
 		91A56C3422FD3DDF00FA59F1 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A56C3222FD3DDF00FA59F1 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91A56C3722FD4E1900FA59F1 /* TabHeaderPageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A56C3622FD4E1900FA59F1 /* TabHeaderPageDemo.swift */; };
+		91A56C3B22FDA29F00FA59F1 /* AbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A56C3A22FDA29F00FA59F1 /* AbstractView.swift */; };
+		91A56C3C22FDA2A900FA59F1 /* AbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A56C3A22FDA29F00FA59F1 /* AbstractView.swift */; };
 		91D527EE22FC357C00C553AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D527ED22FC357C00C553AA /* AppDelegate.swift */; };
 		91D527F022FC357C00C553AA /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D527EF22FC357C00C553AA /* DemoListViewController.swift */; };
 		91D527F322FC357C00C553AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D527F122FC357C00C553AA /* Main.storyboard */; };
@@ -41,10 +43,10 @@
 		91D5280E22FC357E00C553AA /* KitCode_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5280D22FC357E00C553AA /* KitCode_ExampleUITests.swift */; };
 		91D5281D22FC370B00C553AA /* TabHeaderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281C22FC370B00C553AA /* TabHeaderPage.swift */; };
 		91D5282022FC37B600C553AA /* TabHeaderPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */; };
-		91D5282322FC3D7500C553AA /* TabHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* TabHeaderCell.swift */; };
+		91D5282322FC3D7500C553AA /* TabHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */; };
 		91D5282522FC52B100C553AA /* TabHeaderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281C22FC370B00C553AA /* TabHeaderPage.swift */; };
 		91D5282622FC52C000C553AA /* TabHeaderPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */; };
-		91D5282722FC68C700C553AA /* TabHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* TabHeaderCell.swift */; };
+		91D5282722FC68C700C553AA /* TabHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */; };
 		91D5282822FC690700C553AA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C02259DDC30003364E /* Result.swift */; };
 		91D5282922FC690700C553AA /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C22259DDDE0003364E /* TokenRequest.swift */; };
 		91D5282A22FC690700C553AA /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EC1C42259DDF40003364E /* DataProvider.swift */; };
@@ -128,6 +130,7 @@
 		91A56C2F22FD3DB200FA59F1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		91A56C3222FD3DDF00FA59F1 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		91A56C3622FD4E1900FA59F1 /* TabHeaderPageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderPageDemo.swift; sourceTree = "<group>"; };
+		91A56C3A22FDA29F00FA59F1 /* AbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AbstractView.swift; path = Base/AbstractView.swift; sourceTree = "<group>"; };
 		91D527EB22FC357C00C553AA /* KitCode-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KitCode-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D527ED22FC357C00C553AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91D527EF22FC357C00C553AA /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
@@ -143,7 +146,7 @@
 		91D5280F22FC357E00C553AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91D5281C22FC370B00C553AA /* TabHeaderPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderPage.swift; sourceTree = "<group>"; };
 		91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderPageViewModel.swift; sourceTree = "<group>"; };
-		91D5282222FC3D7500C553AA /* TabHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderCell.swift; sourceTree = "<group>"; };
+		91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				91D5282122FC3D5900C553AA /* TabHeader */,
+				91A56C3A22FDA29F00FA59F1 /* AbstractView.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -343,7 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				91D5281C22FC370B00C553AA /* TabHeaderPage.swift */,
-				91D5282222FC3D7500C553AA /* TabHeaderCell.swift */,
+				91D5282222FC3D7500C553AA /* TabHeaderItemView.swift */,
 			);
 			path = TabHeader;
 			sourceTree = "<group>";
@@ -558,10 +562,11 @@
 				235C78E4222E84C1006D7812 /* StringExtensions.swift in Sources */,
 				233EC1C92259DE240003364E /* Dependencyfactory.swift in Sources */,
 				233EC1CD2259DE790003364E /* DependencyContainer.swift in Sources */,
+				91A56C3B22FDA29F00FA59F1 /* AbstractView.swift in Sources */,
 				91D5282022FC37B600C553AA /* TabHeaderPageViewModel.swift in Sources */,
 				233EC1D52259E71C0003364E /* UIImageViewExtensions.swift in Sources */,
 				233EC1C32259DDDE0003364E /* TokenRequest.swift in Sources */,
-				91D5282322FC3D7500C553AA /* TabHeaderCell.swift in Sources */,
+				91D5282322FC3D7500C553AA /* TabHeaderItemView.swift in Sources */,
 				91D5281D22FC370B00C553AA /* TabHeaderPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,12 +584,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91D5282722FC68C700C553AA /* TabHeaderCell.swift in Sources */,
+				91D5282722FC68C700C553AA /* TabHeaderItemView.swift in Sources */,
 				91D527F022FC357C00C553AA /* DemoListViewController.swift in Sources */,
 				91D5282622FC52C000C553AA /* TabHeaderPageViewModel.swift in Sources */,
 				91D5282822FC690700C553AA /* Result.swift in Sources */,
 				91A56C3722FD4E1900FA59F1 /* TabHeaderPageDemo.swift in Sources */,
 				91D527EE22FC357C00C553AA /* AppDelegate.swift in Sources */,
+				91A56C3C22FDA2A900FA59F1 /* AbstractView.swift in Sources */,
 				91D5282E22FC690700C553AA /* DependencyContainer.swift in Sources */,
 				91D5282B22FC690700C553AA /* NetworkToken.swift in Sources */,
 				91D5282A22FC690700C553AA /* DataProvider.swift in Sources */,
