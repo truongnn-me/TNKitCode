@@ -16,11 +16,9 @@ public class TabHeaderPage: UIViewController {
     fileprivate var tabIndicatorLeadingConstraint: NSLayoutConstraint?
     fileprivate var tabIndicatorWidthConstraint: NSLayoutConstraint?
     
-    let disposeBag = DisposeBag()
-    
     var stackLayout: UIStackView = {
         let stackView = UIStackView(forAutoLayout: ())
-        stackView.axis = .horizontal        
+        stackView.axis = .horizontal
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 5
@@ -52,14 +50,14 @@ public class TabHeaderPage: UIViewController {
         tabBarHeaderView.autoMatch(.height, to: .height, of: view, withMultiplier: 0.95)
         tabBarHeaderView.addSubview(stackLayout)
         stackLayout.autoPinEdgesToSuperviewEdges()
-        for index in 0...10 {
-            let childView = DefaultTabHeaderItemView(forAutoLayout: ())
-            childView.tag = index
+        _ = viewModel.listItemTab.map { (model) -> DefaultTabHeaderItemView in
+            let tabItemView = DefaultTabHeaderItemView(forAutoLayout: ())
+            tabItemView.label.text = model.title
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TabHeaderPage.clickAction))
-            childView.addGestureRecognizer(tapGesture)
-            stackLayout.addArrangedSubview(childView)
+            tabItemView.addGestureRecognizer(tapGesture)
+            stackLayout.addArrangedSubview(tabItemView)
+            return tabItemView
         }
-        
         for childView in stackLayout.arrangedSubviews {
             childView.autoMatch(.height, to: .height, of: tabBarHeaderView)
         }

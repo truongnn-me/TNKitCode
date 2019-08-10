@@ -9,5 +9,8 @@
 import Foundation
 
 public class TabHeaderPageViewModel {
-    
+    var listItemTab: [DefaultItemModel] = []
+    init() {
+        listItemTab.append(contentsOf: Array(1...10).map { DefaultItemModel(title: "Title \($0)") })
+    }
 }

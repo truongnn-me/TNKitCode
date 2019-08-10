@@ -21,6 +21,8 @@
 		235C78E4222E84C1006D7812 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C78E3222E84C1006D7812 /* StringExtensions.swift */; };
 		235C78E9222E8508006D7812 /* TNStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C78E8222E8508006D7812 /* TNStringTests.swift */; };
 		235C78FB222E878A006D7812 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235C78FA222E878A006D7812 /* ViewExtensions.swift */; };
+		9176B89B22FE9F620008DEF7 /* DefaultItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9176B89A22FE9F620008DEF7 /* DefaultItemModel.swift */; };
+		9176B89C22FE9F620008DEF7 /* DefaultItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9176B89A22FE9F620008DEF7 /* DefaultItemModel.swift */; };
 		91A56C2622FD2F7D00FA59F1 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A56C2422FD2F7D00FA59F1 /* PureLayout.framework */; };
 		91A56C2722FD2F7D00FA59F1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A56C2522FD2F7D00FA59F1 /* RxSwift.framework */; };
 		91A56C2922FD309700FA59F1 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A56C2422FD2F7D00FA59F1 /* PureLayout.framework */; };
@@ -125,6 +127,7 @@
 		235C78E3222E84C1006D7812 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		235C78E8222E8508006D7812 /* TNStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TNStringTests.swift; sourceTree = "<group>"; };
 		235C78FA222E878A006D7812 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		9176B89A22FE9F620008DEF7 /* DefaultItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultItemModel.swift; sourceTree = "<group>"; };
 		91A56C2422FD2F7D00FA59F1 /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
 		91A56C2522FD2F7D00FA59F1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		91A56C2F22FD3DB200FA59F1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -338,7 +341,6 @@
 		91D5281E22FC378A00C553AA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -346,7 +348,9 @@
 		91D5282122FC3D5900C553AA /* TabHeader */ = {
 			isa = PBXGroup;
 			children = (
+				91D5281F22FC37B600C553AA /* TabHeaderPageViewModel.swift */,
 				91D5281C22FC370B00C553AA /* TabHeaderPage.swift */,
+				9176B89A22FE9F620008DEF7 /* DefaultItemModel.swift */,
 				91D5282222FC3D7500C553AA /* DefaultTabHeaderItemView.swift */,
 			);
 			path = TabHeader;
@@ -557,6 +561,7 @@
 				233EC1CB2259DE4B0003364E /* URLSessionExtension.swift in Sources */,
 				233EC1C12259DDC30003364E /* Result.swift in Sources */,
 				235C78FB222E878A006D7812 /* ViewExtensions.swift in Sources */,
+				9176B89B22FE9F620008DEF7 /* DefaultItemModel.swift in Sources */,
 				233EC1C72259DE0B0003364E /* NetworkToken.swift in Sources */,
 				233EC1C52259DDF40003364E /* DataProvider.swift in Sources */,
 				235C78E4222E84C1006D7812 /* StringExtensions.swift in Sources */,
@@ -584,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9176B89C22FE9F620008DEF7 /* DefaultItemModel.swift in Sources */,
 				91D5282722FC68C700C553AA /* DefaultTabHeaderItemView.swift in Sources */,
 				91D527F022FC357C00C553AA /* DemoListViewController.swift in Sources */,
 				91D5282622FC52C000C553AA /* TabHeaderPageViewModel.swift in Sources */,
