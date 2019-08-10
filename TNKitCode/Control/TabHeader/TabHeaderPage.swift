@@ -14,20 +14,22 @@ import RxCocoa
 public class TabHeaderPage: UIViewController {
     
     fileprivate var tabIndicatorLeadingConstraint: NSLayoutConstraint?
+    fileprivate var tabIndicatorWidthConstraint: NSLayoutConstraint?
     
     let disposeBag = DisposeBag()
     
     var stackLayout: UIStackView = {
         let stackView = UIStackView(forAutoLayout: ())
-        stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing // .FillEqually .FillProportionally .EqualSpacing .EqualCentering
-        stackView.alignment = .fill // .Leading .FirstBaseline .Center .Trailing .LastBaseline
-        stackView.spacing = 10
+        stackView.axis = .horizontal        
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 5
         return stackView
     }()
     
     var tabBarHeaderView: UIScrollView = {
         let scrollView = UIScrollView(forAutoLayout: ())
+        scrollView.backgroundColor = .black
         return scrollView
     }()
     
@@ -46,17 +48,14 @@ public class TabHeaderPage: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tabBarHeaderView)
-        tabBarHeaderView.translatesAutoresizingMaskIntoConstraints = false
         tabBarHeaderView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 0, left: 0, bottom: 0, right:0), excludingEdge: .bottom)
         tabBarHeaderView.autoMatch(.height, to: .height, of: view, withMultiplier: 0.95)
-        
         tabBarHeaderView.addSubview(stackLayout)
         stackLayout.autoPinEdgesToSuperviewEdges()
-        stackLayout.translatesAutoresizingMaskIntoConstraints = false
         for index in 0...10 {
             let childView = DefaultTabHeaderItemView(forAutoLayout: ())
             childView.tag = index
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickAction))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TabHeaderPage.clickAction))
             childView.addGestureRecognizer(tapGesture)
             stackLayout.addArrangedSubview(childView)
         }
@@ -65,35 +64,24 @@ public class TabHeaderPage: UIViewController {
             childView.autoMatch(.height, to: .height, of: tabBarHeaderView)
         }
         view.addSubview(indicatorView)
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        tabIndicatorLeadingConstraint = indicatorView.autoPinEdge(toSuperviewEdge: .left, withInset: 0)
         indicatorView.autoPinEdge(.top, to: .bottom, of: tabBarHeaderView, withOffset: 0)
-        indicatorView.autoSetDimension(.width, toSize: 29)
         indicatorView.autoMatch(.height, to: .height, of: view, withMultiplier: 0.05)
+        tabIndicatorLeadingConstraint = indicatorView.autoPinEdge(toSuperviewEdge: .left, withInset: 0)
+        tabIndicatorWidthConstraint = indicatorView.autoSetDimension(.width, toSize: 29)
     }
     
-    @objc func clickAction() {
-        print("####Call me")
-        let view = stackLayout.arrangedSubviews[5]
-        self.tabIndicatorLeadingConstraint?.isActive = false
+    @objc func clickAction(_ sender: AnyObject) {
+        guard
+            let tap = sender as? UITapGestureRecognizer,
+            let view = tap.view else { return }
+        tabIndicatorLeadingConstraint?.isActive = false
+        tabIndicatorWidthConstraint?.isActive = false
         tabIndicatorLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        tabIndicatorWidthConstraint = indicatorView.widthAnchor.constraint(equalTo: view.widthAnchor)
         UIView.animate(withDuration: 0.5) {
             self.tabIndicatorLeadingConstraint?.isActive = true
+            self.tabIndicatorWidthConstraint?.isActive = true
         }
     }
-    
-}
 
-
-extension TabHeaderPage: UICollectionViewDelegate {
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Call me")
-        let cell = collectionView.cellForItem(at: indexPath)
-        self.tabIndicatorLeadingConstraint?.isActive = false
-        tabIndicatorLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: cell!.leadingAnchor)
-        UIView.animate(withDuration: 0.5) {
-            self.tabIndicatorLeadingConstraint?.isActive = true
-        }
-        
-    }
 }

@@ -12,8 +12,10 @@ import PureLayout
 class DefaultTabHeaderItemView: AbstractView {
     
     var label: UILabel = {
-        let v = UILabel(forAutoLayout: ())
-        return v
+        let label = UILabel(forAutoLayout: ())
+        label.textColor = .white
+        label.textAlignment = .center
+        return label
     }()
     
     override func setupView() {
@@ -21,7 +23,8 @@ class DefaultTabHeaderItemView: AbstractView {
         label.autoAlignAxis(toSuperviewAxis: .horizontal)
         label.autoPinEdge(toSuperviewEdge: .left)
         label.autoPinEdge(toSuperviewEdge: .right)
-        label.text = "Truong"
+        let randomLength = Int.random(in: 10...30)
+        label.text = String.randomString(inLength: randomLength)
         setBorder(color: .blue, width: 1)
     }
     
