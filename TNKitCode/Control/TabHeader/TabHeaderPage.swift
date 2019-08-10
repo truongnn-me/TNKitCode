@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 public class TabHeaderPage: UIViewController {
-    
+    var viewModel: TabHeaderPageViewModel!
     fileprivate var tabIndicatorLeadingConstraint: NSLayoutConstraint?
     fileprivate var tabIndicatorWidthConstraint: NSLayoutConstraint?
     
@@ -31,11 +31,14 @@ public class TabHeaderPage: UIViewController {
         return scrollView
     }()
     
+    public init(viewModel vm: TabHeaderPageViewModel) {
+        viewModel = vm
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    var viewModel: TabHeaderPageViewModel = {
-        let viewModel = TabHeaderPageViewModel()
-        return viewModel
-    }()
+    required init?(coder aDecoder: NSCoder) {        
+        super.init(coder: aDecoder)
+    }
     
     var indicatorView: UIView = {
         let view = UIView(frame: .zero)

@@ -10,7 +10,8 @@ import UIKit
 
 class TabHeaderPageDemo: UIViewController {
     let tabHeadePage: TabHeaderPage = {
-        let page = TabHeaderPage()
+        let viewModel = TabHeaderPageViewModel()
+        let page = TabHeaderPage(viewModel: viewModel)
         return page
     }()
     
