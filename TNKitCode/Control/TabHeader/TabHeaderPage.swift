@@ -11,8 +11,13 @@ import PureLayout
 import RxSwift
 import RxCocoa
 
+protocol TabHeaderPageProtocol {
+    func didSelect(index: Int)
+}
+
 public class TabHeaderPage: UIViewController {
     var viewModel: TabHeaderPageViewModel!
+    var delegate: TabHeaderPageProtocol?
     fileprivate var tabIndicatorLeadingConstraint: NSLayoutConstraint?
     fileprivate var tabIndicatorWidthConstraint: NSLayoutConstraint?
     
@@ -36,7 +41,7 @@ public class TabHeaderPage: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder aDecoder: NSCoder) {        
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -83,6 +88,11 @@ public class TabHeaderPage: UIViewController {
             self.tabIndicatorLeadingConstraint?.isActive = true
             self.tabIndicatorWidthConstraint?.isActive = true
         }
+        
+        if let index = stackLayout.arrangedSubviews.firstIndex(of: view) {
+            delegate?.didSelect(index: index)
+        }
+        
     }
 
 }

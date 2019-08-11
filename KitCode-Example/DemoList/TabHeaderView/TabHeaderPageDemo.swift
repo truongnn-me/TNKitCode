@@ -17,11 +17,11 @@ class TabHeaderPageDemo: UIViewController {
     }()
     
     let viewControllers: [UIViewController] = {
-        return Array(0...2).map({ (index) -> UIViewController in
+        return Array(1...10).map({ (index) -> UIViewController in
             let page = SimplePage()
             page.titleLabel.text = "Simple Demo \(index)"
             return page
-        })        
+        })
     }()
     
     let pageViewController: UIPageViewController = {
@@ -44,6 +44,7 @@ class TabHeaderPageDemo: UIViewController {
         tabHeadePage.view.autoPinEdgesToSuperviewSafeArea(with: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), excludingEdge: .bottom)
         tabHeadePage.view.autoSetDimension(.height, toSize: 50)
         tabHeadePage.didMove(toParent: self)
+        tabHeadePage.delegate = self
         
         view.addSubview(contentSwipeView)
         contentSwipeView.autoPinEdge(.top, to: .bottom, of: tabHeadePage.view)
@@ -86,10 +87,16 @@ extension TabHeaderPageDemo: UIPageViewControllerDataSource {
                 // go to next page in array
                 return self.viewControllers[viewControllerIndex + 1]
             } else {
-                // wrap to first page in array
+                // wrap to first page in array                
                 return self.viewControllers.first
             }
         }
         return nil
+    }
+}
+
+extension TabHeaderPageDemo: TabHeaderPageProtocol {
+    func didSelect(index: Int) {
+        pageViewController.setViewControllers([viewControllers[index]], direction: .forward, animated: false, completion: nil)
     }
 }
